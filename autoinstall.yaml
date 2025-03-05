@@ -1,0 +1,95 @@
+#cloud-config
+autoinstall:
+    version: 1
+    identity:
+        realname: 'Lucas Barreto'
+        hostname: ubuntu-dev
+        username: barreto
+        password: '123773'
+    locale: pt_BR.utf8
+    keyboard:
+        layout: br
+    timezone: "America/Sao_Paulo"   
+    packages:
+        - git
+        - libreoffice
+        - gimp
+        - vlc
+        - curl
+        - wget
+        - python3
+        - python3-pip
+        - openjdk-17-jdk
+        - maven
+        - gradle
+        - wireshark
+        - nmap
+        - openvpn
+        - htop
+        - tmux
+        - net-tools
+        - steam
+        - gnome-tweaks
+        - gnome-shell-extensions
+        - gaphor  # Software de modelagem UML
+    snaps:
+        - name: spotify
+          channel: stable
+          classic: false
+        - name: code
+          channel: stable
+          classic: true
+        - name: postman
+          channel: stable
+          classic: true
+        - name: docker
+          channel: stable
+          classic: true
+        - name: obs-studio
+          channel: stable
+          classic: true
+        - name: eclipse
+          channel: stable
+          classic: true
+        - name: ten-forward
+          channel: latest/stable
+          classic: true
+        - name: mini-text
+          channel: latest/stable
+          classic: true
+        - name: file-shredder
+          channel: latest/stable
+          classic: true
+        - name: webapps
+          channel: latest/stable
+          classic: true
+        - name: apostrophe
+          channel: latest/stable
+          classic: true
+        - name: emblem
+          channel: latest/stable
+          classic: true
+        - name: dev-toolbox
+          channel: latest/stable
+          classic: true
+        - name: collision
+          channel: latest/stable
+          classic: true
+    codecs:
+        install: true
+    drivers:
+        install: true
+    updates: all
+    shutdown: reboot
+    late-commands:
+        - wget -O /tmp/google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        - dpkg -i /tmp/google-chrome.deb || apt-get install -f -y
+        - wget -O /tmp/jetbrains-toolbox.tar.gz "https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.0.3.17717.tar.gz"
+        - tar -xzf /tmp/jetbrains-toolbox.tar.gz -C /opt/
+        - wget -qO- https://github.com/vinceliuice/Orchis-theme/archive/refs/heads/master.zip -O /tmp/orchis.zip && unzip /tmp/orchis.zip -d /usr/share/themes/
+        - wget -qO- https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/heads/master.zip -O /tmp/papirus.zip && unzip /tmp/papirus.zip -d /usr/share/icons/
+        - run: sudo -u barreto gsettings set org.gnome.desktop.interface gtk-theme 'Orchis'
+        - run: sudo -u barreto gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
+        - run: sudo -u barreto gsettings set org.gnome.desktop.wm.preferences theme 'Orchis'
+        - run: sudo -u barreto gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
+        - run: sudo -u barreto gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
