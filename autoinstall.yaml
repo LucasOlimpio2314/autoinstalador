@@ -2,7 +2,7 @@
 autoinstall:
     version: 1
     identity:
-        realname: 'Lucas Barreto'
+        realname: 'LucasBarreto'
         hostname: ubuntu-dev
         username: barreto
         password: '123773'
@@ -81,15 +81,3 @@ autoinstall:
         install: true
     updates: all
     shutdown: reboot
-    late-commands:
-        - wget -O /tmp/google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        - dpkg -i /tmp/google-chrome.deb || apt-get install -f -y
-        - wget -O /tmp/jetbrains-toolbox.tar.gz "https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.0.3.17717.tar.gz"
-        - tar -xzf /tmp/jetbrains-toolbox.tar.gz -C /opt/
-        - wget -qO- https://github.com/vinceliuice/Orchis-theme/archive/refs/heads/master.zip -O /tmp/orchis.zip && unzip /tmp/orchis.zip -d /usr/share/themes/
-        - wget -qO- https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/heads/master.zip -O /tmp/papirus.zip && unzip /tmp/papirus.zip -d /usr/share/icons/
-        - run: sudo -u barreto gsettings set org.gnome.desktop.interface gtk-theme 'Orchis'
-        - run: sudo -u barreto gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
-        - run: sudo -u barreto gsettings set org.gnome.desktop.wm.preferences theme 'Orchis'
-        - run: sudo -u barreto gsettings set org.gnome.desktop.interface cursor-theme 'DMZ-White'
-        - run: sudo -u barreto gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
