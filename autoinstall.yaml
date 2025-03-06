@@ -2,46 +2,37 @@
 autoinstall:
     version: 1
     identity:
-        realname: 'LucasBarreto'
+        realname: 'Lucas Barreto'
         hostname: ubuntu-dev
         username: barreto
-        password: '$y$j9T$uhkxlm8nUQaNu.6rl4k2d.$DIldpYy96OHg8lFjfXfc671BZcGWkPOmaDONGAhGSg3'
+        password: "$6$abc123$3vT1xD/fjOeU98kAq1kXYC7xi9mgqDO79u6oE2Q8h8PVNp6D1yW.lNkp0u3u3bUURdOsX.KdYz5dtJY0qU48f/"
     locale: pt_BR.utf8
     keyboard:
         layout: br
-    timezone: "America/Sao_Paulo"   
+    timezone: "America/Sao_Paulo"
+
     packages:
         - git
-        - libreoffice
-        - gimp
-        - vlc
         - curl
         - wget
-        - python3
-        - python3-pip
+        - build-essential
         - openjdk-17-jdk
-        - maven
-        - gradle
-        - wireshark
-        - nmap
-        - openvpn
-        - htop
-        - tmux
-        - net-tools
-        - steam
         - gnome-tweaks
-        - gnome-shell-extensions
-        - gaphor
+        - docker.io
+        - docker-compose
+        - nodejs
+        - npm
+
     snaps:
-        - name: spotify
-          channel: stable
-          classic: false
         - name: code
           channel: stable
           classic: true
-        - name: postman
+        - name: google-chrome
+          channel: stable
+        - name: steam
           channel: stable
           classic: true
+
     codecs:
         install: true
     drivers:
