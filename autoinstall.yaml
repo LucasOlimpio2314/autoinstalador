@@ -42,39 +42,6 @@ autoinstall:
         - name: postman
           channel: stable
           classic: true
-        - name: docker
-          channel: stable
-          classic: true
-        - name: obs-studio
-          channel: stable
-          classic: true
-        - name: eclipse
-          channel: stable
-          classic: true
-        - name: ten-forward
-          channel: latest/stable
-          classic: true
-        - name: mini-text
-          channel: latest/stable
-          classic: true
-        - name: file-shredder
-          channel: latest/stable
-          classic: true
-        - name: webapps
-          channel: latest/stable
-          classic: true
-        - name: apostrophe
-          channel: latest/stable
-          classic: true
-        - name: emblem
-          channel: latest/stable
-          classic: true
-        - name: dev-toolbox
-          channel: latest/stable
-          classic: true
-        - name: collision
-          channel: latest/stable
-          classic: true
     codecs:
         install: true
     drivers:
