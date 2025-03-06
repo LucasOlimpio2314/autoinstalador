@@ -5,7 +5,7 @@ autoinstall:
         realname: 'LucasBarreto'
         hostname: ubuntu-dev
         username: barreto
-        password: '123773'
+        password: '$y$j9T$uhkxlm8nUQaNu.6rl4k2d.$DIldpYy96OHg8lFjfXfc671BZcGWkPOmaDONGAhGSg3'
     locale: pt_BR.utf8
     keyboard:
         layout: br
@@ -31,7 +31,7 @@ autoinstall:
         - steam
         - gnome-tweaks
         - gnome-shell-extensions
-        - gaphor  # Software de modelagem UML
+        - gaphor
     snaps:
         - name: spotify
           channel: stable
